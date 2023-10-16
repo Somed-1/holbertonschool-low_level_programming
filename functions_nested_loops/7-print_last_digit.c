@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _abs - returns 1 if char is lowercase
+ * print_last_digit - returns 1 if char is lowercase
  *
  * @num: character to be checked if grater than zero etc, type int
  *
@@ -10,6 +10,10 @@ int print_last_digit(int num)
 {
 int last;
 last = num % 10;
+if (last < 0)
+{
+	last = -last;
+}
 _putchar(48 + last);
 return (last);
 }
