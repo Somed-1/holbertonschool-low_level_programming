@@ -9,7 +9,7 @@
 int print_last_digit(int num);
 {
 int last;
-last = num % 10
+last = num % 10;
 _putchar(48 + last);
 return (last);
 }
