@@ -10,7 +10,7 @@ int number;
 
 for (number = 0; number < 10; number++)
 {
-	putchar((char)number);
+	putchar(48 + number);
 }
 putchar('\n');
 return (0);
