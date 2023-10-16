@@ -6,7 +6,7 @@
  *
  * Return: 1 and prints + if > 0, 0 otherwise
  **/
-int print_last_digit(int num);
+int print_last_digit(int num)
 {
 int last;
 last = num % 10;
