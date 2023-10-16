@@ -9,11 +9,11 @@ int main(void)
 char lower;
 char upper;
 
-for (lower = 'a'; lower<'z'+1; lower++)
+for (lower = 'a'; lower < 'z' + 1; lower++)
 {
 	putchar(lower);
 }
-for (upper = 'A'; upper<'Z'+1; upper++)
+for (upper = 'A'; upper < 'Z' + 1; upper++)
 {
 	putchar(upper);
 }
