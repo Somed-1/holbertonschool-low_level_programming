@@ -14,6 +14,6 @@ if (num < 0)
 }
 else
 {
-	return num;
+	return (num);
 }
 }
