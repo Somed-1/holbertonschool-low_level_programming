@@ -11,8 +11,11 @@ int number;
 for (number = 0; number < 10; number++)
 {
 	putchar(48 + number);
-	putchar(',');
-	putchar(' ');
+	if (number != 9)
+	{
+		putchar(',');
+		putchar(' ');
+	}
 }
 printf("\n");
 return (0);
