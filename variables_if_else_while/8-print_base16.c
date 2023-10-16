@@ -15,7 +15,7 @@ for (number = 0; number < 10; number++)
 }
 for (hex_l = 'a'; hex_l < 'f' + 1; hex_l++)
 {
-	putchar(hex_l)
+	putchar(hex_l);
 }
 putchar('\n');
 return (0);
