@@ -17,6 +17,6 @@ for (upper = 'A'; upper<'Z'+1; upper++)
 {
 	putchar(upper);
 }
-putchar('$');
+putchar("\n");
 return (0);
 }
