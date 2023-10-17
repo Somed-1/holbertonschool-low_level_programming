@@ -28,5 +28,6 @@ for (number = 1; number < 101; number++)
 	dev = 0;
 	printf(" ");
 }
+printf("\n");
 return (0);
 }
