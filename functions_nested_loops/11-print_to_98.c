@@ -25,7 +25,12 @@ for (; n < 99; n++)
 	{
 		_putchar('0' + n);
 	}
+	if (n == 98)
+	{
+		continue;
+	}
 	_putchar(',');
 	_putchar(' ');
 }
+_putchar('\n');
 }
