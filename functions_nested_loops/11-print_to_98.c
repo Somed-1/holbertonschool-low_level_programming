@@ -1,12 +1,14 @@
 #include "main.h"
 
 /**
- * times_table - returns 1 if char is lowercase
+ * print_to_98 - returns 1 if char is lowercase
+ *
+ * @n: int
  *
  * Return: 1 if lower case, 0 otherwise
  **/
 
-void times_table(int n)
+void print_to_98(int n)
 {
 int last;
 for (; n < 99; n++)
