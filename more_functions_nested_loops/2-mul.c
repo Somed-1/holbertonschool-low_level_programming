@@ -8,7 +8,7 @@
  *
  * Return: 1 if lower case, 0 otherwise
  **/
-int _isupper(int c)
+int mul(int a, int b)
 {
 return (a * b);
 }
