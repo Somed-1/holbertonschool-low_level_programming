@@ -1,14 +1,12 @@
 #include "main.h"
 
 /**
- * jack_bauer - returns 1 if char is lowercase
- *
- * @hr and @min: character to be checked if lower case, type int
+ * times_table - returns 1 if char is lowercase
  *
  * Return: 1 if lower case, 0 otherwise
  **/
 
-void jack_bauer(void)
+void times_table(void)
 {
 int i;
 int j;
@@ -17,12 +15,12 @@ int last;
 
 for (i = 0; i < 10; i++)
 {
-	for (j = 0: j < 10; j++)
+	for (j = 0; j < 10; j++)
 	{
 		number = i * j;
 		if (number >= 10)
 		{
-			last = number % 10
+			last = number % 10;
 			number /= 10;
 			number %= 10;
 			_putchar('0' + number);
