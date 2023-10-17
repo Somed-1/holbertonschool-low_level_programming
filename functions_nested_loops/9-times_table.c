@@ -25,15 +25,21 @@ for (i = 0; i < 10; i++)
 			number %= 10;
 			_putchar('0' + number);
 			_putchar('0' + last);
-			_putchar(',');
-			_putchar(' ');
+			if (j != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
 		else
 		{
 			_putchar('0' + number);
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
+			if (j != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+			}
 		}
 	}
 	_putchar('\n');
