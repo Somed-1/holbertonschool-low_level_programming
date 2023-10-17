@@ -24,5 +24,4 @@ for (i = 1; i < size + 1; i++)
 	}
 	_putchar('\n');
 }
-return (0);
 }
