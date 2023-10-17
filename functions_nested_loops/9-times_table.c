@@ -29,6 +29,7 @@ for (i = 0; i < 10; i++)
 		else
 		{
 			_putchar('0' + number);
+			_putchar(' ');
 		}
 		_putchar(',');
 		_putchar(' ');
