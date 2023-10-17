@@ -14,7 +14,7 @@ for (number = 0; number < 10; number++)
 {
 	if (number >= 10)
 	{
-		_putchar('0' + number / 10)
+		_putchar('0' + number / 10);
 	}
 	_putchar('0' + number % 10);
 }
