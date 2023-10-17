@@ -18,6 +18,11 @@ for (i = 0; i < 10; i++)
 	for (j = 0; j < 10; j++)
 	{
 		number = i * j;
+		if (col > 0)
+		{
+			_puthcar(',');
+			_putchar(' ');
+		}
 		if (number >= 10)
 		{
 			last = number % 10;
@@ -25,21 +30,10 @@ for (i = 0; i < 10; i++)
 			number %= 10;
 			_putchar('0' + number);
 			_putchar('0' + last);
-			if (j != 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
 		}
 		else
 		{
 			_putchar('0' + number);
-			if (j != 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-			}
 		}
 	}
 	_putchar('\n');
