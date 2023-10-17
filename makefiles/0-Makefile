@@ -1,8 +1,8 @@
 all:
-    gcc main.c school.c -o school
+gcc main.c school.c -o school
 
 clean:
-    rm -f school
+rm -f school
 
 re: clean all
 
