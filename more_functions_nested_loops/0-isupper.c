@@ -1,16 +1,16 @@
 #include "main.h"
 /**
- * _isuper - Entry point
+ * _isupper - returns 1 if char is lowercase
  *
- *@c: int
+ * @c: character to be checked if upper case, type int
  *
- * Return: Always 0 (Success)
- */
-int _isuper(int c)
+ * Return: 1 if lower case, 0 otherwise
+ **/
+int _isupper(int c)
 {
 if (c >= 65 && c <= 90)
 {
-	return (1);
+return (1);
 }
 return (0);
 }
