@@ -1,22 +1,28 @@
 #include "main.h"
+
 /**
  * jack_bauer - returns 1 if char is lowercase
  *
- * Return: void
+ * @hr and @min: character to be checked if lower case, type int
+ *
+ * Return: 1 if lower case, 0 otherwise
  **/
+
 void jack_bauer(void)
 {
-	for (int hour = 0; hour < 24; hour++)
-	{
-		for (int minute = 0; minute < 60; minute++)
-		{
-			_putchar('0' + (hour / 10));
-			_putchar('0' + (hour % 10));
-			_putchar(':');
-			_putchar('0' + (minute / 10));
-			_putchar('0' + (minute % 10));
-			_putchar('\n');
-		}
-	}
-}
+int hr;
+int min;
 
+for (hr = 0; hr < 24; hr++)
+{
+for (min = 0; min < 60; min++)
+{
+_putchar((hr / 10) + '0');
+_putchar((hr % 10) + '0');
+_putchar(':');
+_putchar((min / 10) + '0');
+_putchar((min % 10) + '0');
+_putchar('\n');
+}
+}
+}
