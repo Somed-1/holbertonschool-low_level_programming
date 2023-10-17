@@ -21,7 +21,7 @@ for (i = 0; i < 10; i++)
 		number = i * j;
 		if (j > 0)
 		{
-			_puthcar(',');
+			_putchar(',');
 			_putchar(' ');
 		}
 		if (number >= 10)
