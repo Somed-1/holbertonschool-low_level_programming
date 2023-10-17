@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_line i- returns 1 if char is lowercase
+ * print_line - returns 1 if char is lowercase
  *
  *@n: int
  *
