@@ -23,6 +23,10 @@ for (i = 0; i < 10; i++)
 		{
 			_putchar(',');
 			_putchar(' ');
+			if (number < 10)
+			{
+				_putchar(' ');
+			}
 		}
 		if (number >= 10)
 		{
