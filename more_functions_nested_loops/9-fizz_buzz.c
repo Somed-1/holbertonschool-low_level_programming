@@ -26,7 +26,10 @@ for (number = 1; number < 101; number++)
 		printf("%d", number);
 	}
 	dev = 0;
-	printf(" ");
+	if (number != 100)
+	{
+		printf(" ");
+	}
 }
 printf("\n");
 return (0);
