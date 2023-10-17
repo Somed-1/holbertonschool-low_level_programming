@@ -6,7 +6,7 @@
  *
  * Return: Always 0 (Success)
  */
-int _isuper(int c);
+int _isuper(int c)
 {
 if (c >= 65 && c <= 90)
 {
