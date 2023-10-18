@@ -1,6 +1,28 @@
 #include "main.h"
 
 /**
+ * print - prints number
+ *
+ * @n: int
+ *
+ * Return: 1 if lower case,
+ **/
+void print(long n)
+{
+if (n < 0)
+{
+	_putchar('-');
+	n = -n;
+}
+
+if (n/10)
+{
+	print(n/10);
+}
+_putchar(n%10 + '0');
+}
+
+/**
  * print_times_table - returns 1 if char is lowercase
  *
  *@n: int size of table can't be greater than 10 and less than 0
@@ -13,8 +35,6 @@ void print_times_table(int n)
 int i;
 int j;
 int number;
-int last;
-int mid;
 if (n > 0 && n < 15)
 {
 for (i = 0; i < n + 1; i++)
@@ -35,28 +55,7 @@ for (i = 0; i < n + 1; i++)
 				_putchar(' ');
 			}
 		}
-		if (number >= 10 && number < 100)
-		{
-			last = number % 10;
-			number /= 10;
-			number %= 10;
-			_putchar('0' + number);
-			_putchar('0' + last);
-		}
-		else if (number >= 100)
-		{
-			last = number % 10;
-			number /= 10;
-			mid = number % 10;
-			number /= 10;
-			_putchar('0' + number % 10);
-			_putchar('0' + mid);
-			_putchar('0' + last);
-		}
-		else
-		{
-			_putchar('0' + number);
-		}
+		print(number);
 	}
 	_putchar('\n');
 }
