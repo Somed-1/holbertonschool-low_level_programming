@@ -72,11 +72,11 @@ for (i = 3; i <= n; i++)
 strsum(a, b, temp);
 strcpy(a, b);
 strcpy(b, temp);
-
 printf("%s", b);
+
 if (i < n)
 {
-    printf(", ");
+printf(", ");
 }
 }
 }
@@ -86,7 +86,8 @@ if (i < n)
  *
  * Return: Always 0 (Success)
  */
-int main() {
+int main()
+{
 fibonacci(98);
 printf("\n");
 return 0;
