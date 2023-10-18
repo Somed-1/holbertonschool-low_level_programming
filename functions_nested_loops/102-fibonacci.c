@@ -13,13 +13,13 @@ int i;
 a = 1;
 b = 2;
 printf("%lu, %lu, ", a, b);
-for (i = 0; i < 49; i++)
+for (i = 0; i < 48; i++)
 {
 	temp = a + b;
 	a = b;
 	b = temp;
 	printf("%lu", b);
-	if (i != 48)
+	if (i != 47)
 	{
 		printf(", ");
 	}
