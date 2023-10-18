@@ -12,7 +12,7 @@ int temp;
 int i;
 a = 1;
 b = 2;
-printf("%d, %d", a, b);
+printf("%d, %d, ", a, b);
 for (i = 0; i < 51; i++)
 {
 	temp = a + b;
