@@ -19,7 +19,7 @@ for (i = 0; i < 49; i++)
 	a = b;
 	b = temp;
 	printf("%lu", b);
-	if (i != 50)
+	if (i != 48)
 	{
 		printf(", ");
 	}
