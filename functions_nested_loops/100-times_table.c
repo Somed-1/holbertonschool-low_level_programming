@@ -33,7 +33,7 @@ for (i = 0; i < n + 1; i++)
 				_putchar(' ');
 			}
 		}
-		if (number >= 10)
+		if (number >= 10 && number < 100)
 		{
 			last = number % 10;
 			number /= 10;
@@ -44,11 +44,10 @@ for (i = 0; i < n + 1; i++)
 		else if (number >= 100)
 		{
 			last = number % 10;
-			mid = number / 10 % 10;
 			number /= 10;
+			mid = number % 10;
 			number /= 10;
-			number %= 10;
-			_putchar('0' + number);
+			_putchar('0' + number % 10);
 			_putchar('0' + mid);
 			_putchar('0' + last);
 		}
