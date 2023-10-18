@@ -37,7 +37,7 @@ for (i = 0; i < n; i++)
 			_putchar('0' + number);
 			_putchar('0' + last);
 		}
-		if (number >= 100)
+		else if (number >= 100)
 		{
 			last = number % 10;
 			mid = number / 10 % 10;
