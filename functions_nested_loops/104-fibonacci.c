@@ -3,6 +3,15 @@
 
 #define MAX_DIGITS 1000
 
+/**
+ * strsum - returns sum of 2 string numbers
+ *
+ * @a: int
+ * @b: int
+ * @result: char
+ *
+ * Return: result
+ **/
 void strsum(const char* a, const char* b, char* result) {
 int ai;
 int bi;
@@ -40,6 +49,13 @@ i--;
 }
 }
 
+/**
+ * strsum - returns sum of 2 string numbers
+ *
+ * @n: int
+ *
+ * Return: result
+ **/
 void fibonacci(int n) {
 char a[MAX_DIGITS] = "1";
 char b[MAX_DIGITS] = "2";
@@ -59,6 +75,11 @@ if (i < n) {
 }
 }
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main() {
 fibonacci(98);
 printf("\n");
