@@ -13,7 +13,7 @@ int i;
 a = 1;
 b = 2;
 printf("%lu, %lu, ", a, b);
-for (i = 0; i < 51; i++)
+for (i = 0; i < 49; i++)
 {
 	temp = a + b;
 	a = b;
