@@ -12,13 +12,13 @@ unsigned long int temp;
 int i;
 a = 1;
 b = 2;
-printf("%ul, %ul, ", a, b);
+printf("%lu, %lu, ", a, b);
 for (i = 0; i < 51; i++)
 {
 	temp = a + b;
 	a = b;
 	b = temp;
-	printf("%ul", b);
+	printf("%lu", b);
 	if (i != 50)
 	{
 		printf(", ");
