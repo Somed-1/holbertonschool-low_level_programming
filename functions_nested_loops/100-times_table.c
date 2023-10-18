@@ -15,11 +15,11 @@ if (n < 0)
 	n = -n;
 }
 
-if (n/10)
+if (n / 10)
 {
-	print(n/10);
+	print(n / 10);
 }
-_putchar(n%10 + '0');
+_putchar(n % 10 + '0');
 }
 
 /**
@@ -35,7 +35,7 @@ void print_times_table(int n)
 int i;
 int j;
 int number;
-if (n > 0 && n < 15)
+if (n >= 0 && n < 15)
 {
 for (i = 0; i < n + 1; i++)
 {
