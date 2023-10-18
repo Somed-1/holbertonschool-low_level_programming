@@ -10,9 +10,9 @@ int a;
 int b;
 int temp;
 int i;
-a = 0;
-b = 1;
-printf("%d %d", a, b);
+a = 1;
+b = 2;
+printf("%d, %d", a, b);
 for (i = 0; i < 51; i++)
 {
 	temp = a + b;
