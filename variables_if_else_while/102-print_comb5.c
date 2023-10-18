@@ -16,7 +16,7 @@ for (number = 0; number < 10; number++)
 	{
 		for (integer = number_2; integer < 10; integer++)
 		{
-			for (integer_2 = integer + 1; integer_2 < 10; integer_2+++)
+			for (integer_2 = integer + 1; integer_2 < 10; integer_2++)
 			{
 				putchar('0' + number);
 				putchar('0' + number_2);
