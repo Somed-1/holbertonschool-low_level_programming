@@ -6,24 +6,29 @@
  */
 int main(void)
 {
-unsigned long int a;
-unsigned long int b;
-unsigned long int temp;
-int i;
-a = 1;
-b = 2;
-printf("%lu, %lu, ", a, b);
-for (i = 0; i < 48; i++)
+int n = 52, i;
+unsigned long fib[52];
+
+fib[0] = 0;
+fib[1] = 1;
+
+for (i = 2; i < n; i++)
 {
-	temp = a + b;
-	a = b;
-	b = temp;
-	printf("%lu", b);
-	if (i != 47)
-	{
-		printf(", ");
-	}
+fib[i] = fib[i - 1] + fib[i - 2];
 }
+
+for (i = 2; i < n; i++)
+{
+if (i < 51)
+{
+printf("%lu, ", fib[i]);
+}
+else
+{
+printf("%lu", fib[i]);
+}
+}
+
 printf("\n");
 return (0);
 }
