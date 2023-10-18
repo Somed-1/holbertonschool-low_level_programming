@@ -50,7 +50,7 @@ i--;
 }
 
 /**
- * strsum - returns sum of 2 string numbers
+ * fibonacci - returns sum of 2 string numbers
  *
  * @n: int
  *
