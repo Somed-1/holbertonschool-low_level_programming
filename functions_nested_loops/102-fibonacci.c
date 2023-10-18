@@ -18,7 +18,12 @@ for (i = 0; i < 51; i++)
 	temp = a + b;
 	a = b;
 	b = temp;
-	printf("%d\n", b);
+	printf("%d", b);
+	if (i != 50)
+	{
+		printf(", ");
+	}
 }
+printf("\n");
 return (0);
 }
