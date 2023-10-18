@@ -15,9 +15,9 @@ int j;
 int number;
 int last;
 int mid;
-for (i = 0; i < n; i++)
+for (i = 0; i < n + 1; i++)
 {
-	for (j = 0; j < n * n; j++)
+	for (j = 0; j < n + 1; j++)
 	{
 		number = i * j;
 		if (j > 0)
@@ -27,6 +27,10 @@ for (i = 0; i < n; i++)
 			if (number < 10)
 			{
 				_putchar(' ');
+			}
+			if (number < 100)
+			{
+				_putchar(' ')
 			}
 		}
 		if (number >= 10)
