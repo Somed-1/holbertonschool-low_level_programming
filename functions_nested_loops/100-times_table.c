@@ -14,7 +14,7 @@ int i;
 int j;
 int number;
 int last;
-
+int mid;
 for (i = 0; i < n; i++)
 {
 	for (j = 0; j < n * n; j++)
