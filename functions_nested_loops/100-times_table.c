@@ -30,7 +30,7 @@ for (i = 0; i < n + 1; i++)
 			}
 			if (number < 100)
 			{
-				_putchar(' ')
+				_putchar(' ');
 			}
 		}
 		if (number >= 10)
