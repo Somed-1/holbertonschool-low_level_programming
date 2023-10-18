@@ -6,19 +6,19 @@
  */
 int main(void)
 {
-long long int a;
-long long int b;
-long long int temp;
+unsigned long int a;
+unsigned long int b;
+unsigned long int temp;
 int i;
 a = 1;
 b = 2;
-printf("%lld, %lld, ", a, b);
+printf("%ld, %ld, ", a, b);
 for (i = 0; i < 51; i++)
 {
 	temp = a + b;
 	a = b;
 	b = temp;
-	printf("%lld", b);
+	printf("%ld", b);
 	if (i != 50)
 	{
 		printf(", ");
