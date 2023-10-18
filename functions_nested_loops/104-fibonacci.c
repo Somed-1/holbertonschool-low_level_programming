@@ -61,5 +61,6 @@ if (i < n) {
 
 int main() {
 fibonacci(98);
+printf("\n");
 return 0;
 }
