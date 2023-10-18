@@ -2,13 +2,20 @@
 #include <string.h>
 
 #define MAX_DIGITS 1000
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_DIGITS 1000
 
 void strsum(const char* a, const char* b, char* result) {
-int ai = strlen(a);
-int bi = strlen(b);
-int carry = 0;
-int i = 0;
-
+int ai;
+int bi;
+int carry;
+int i;
+ai = strlen(a);
+bi = strlen(b);
+carry = 0;
+i = 0;
 while (ai > 0 || bi > 0 || carry > 0) {
 int num1 = (ai > 0) ? (a[--ai] - '0') : 0;
 int num2 = (bi > 0) ? (b[--bi] - '0') : 0;
@@ -20,8 +27,8 @@ carry = sum / 10;
 
 result[i] = '\0';
 
-// Reverse the result string
-int j = 0;
+int j;
+j = 0;
 i--;
 while (j < i) {
 char temp = result[j];
@@ -36,9 +43,10 @@ void fibonacci(int n) {
 char a[MAX_DIGITS] = "1";
 char b[MAX_DIGITS] = "2";
 char temp[MAX_DIGITS];
+int i;
 
 printf("1, 2, ");
-for (int i = 3; i <= n; i++) {
+for (i = 3; i <= n; i++) {
 strsum(a, b, temp);
 strcpy(a, b);
 strcpy(b, temp);
