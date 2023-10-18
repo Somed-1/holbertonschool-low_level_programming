@@ -12,13 +12,13 @@ long int temp;
 int i;
 a = 1;
 b = 2;
-printf("%d, %d, ", a, b);
+printf("%ld, %ld, ", a, b);
 for (i = 0; i < 51; i++)
 {
 	temp = a + b;
 	a = b;
 	b = temp;
-	printf("%d", b);
+	printf("%ld", b);
 	if (i != 50)
 	{
 		printf(", ");
