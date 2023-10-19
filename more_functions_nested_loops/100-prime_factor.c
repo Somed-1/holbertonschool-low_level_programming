@@ -18,6 +18,6 @@ for (i = 2; i <= n; i++)
 		}
 	}
 }
-printf("%ul\n", i - 1);
+printf("%lu\n", i - 1);
 return (0);
 }
