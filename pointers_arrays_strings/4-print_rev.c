@@ -25,7 +25,7 @@ return (i);
  *
  * Return: Always 0 (Success)
  */
-void _print_rev(char *s)
+void print_rev(char *s)
 {
 int i;
 i = _strlen(s) - 1;
