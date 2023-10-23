@@ -9,7 +9,7 @@
  */
 int stringLength(char *s) {
     int length = 0;
-    while (str[length] != '\0') {
+    while (s[length] != '\0') {
         length++;
     }
     return length;
@@ -24,14 +24,14 @@ int stringLength(char *s) {
  */
 void rev_string(char *s)
 {
-int length = stringLength(str);
+int length = stringLength(s);
 int start = 0;
 int end = length - 1;
 while (start < end)
 {
-	char temp = str[start];
-	str[start] = str[end];
-	str[end] = temp;
+	char temp = s[start];
+	s[start] = s[end];
+	s[end] = temp;
 	start++;
 	end--;
 }
