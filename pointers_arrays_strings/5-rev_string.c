@@ -7,12 +7,14 @@
  *
  * Return: Always 0 (Success)
  */
-int stringLength(char *s) {
-    int length = 0;
-    while (s[length] != '\0') {
-        length++;
-    }
-    return length;
+int stringLength(char *s)
+{
+int length = 0;
+while (s[length] != '\0')
+{
+	length++;
+}
+return (length);
 }
 
 /**
