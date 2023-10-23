@@ -1,6 +1,9 @@
 #include "main.h"
 /**
- * main - Entry point
+ * _strcpy - Entry point
+ *
+ * @dest: char
+ * @src: char
  *
  * Return: Always 0 (Success)
  */
