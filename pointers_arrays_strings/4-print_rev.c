@@ -19,7 +19,7 @@ return (i);
 }
 
 /**
- * _print_rev - Entry point
+ * print_rev - Entry point
  *
  *@s: int
  *
