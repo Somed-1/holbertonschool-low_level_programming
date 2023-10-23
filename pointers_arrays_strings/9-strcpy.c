@@ -10,7 +10,7 @@ int i;
 while (1)
 {
 	dest[i] = src[i];
-	if (src[i] == '\n')
+	if (src[i] == '\0')
 	{
 		return (dest);
 	}
