@@ -26,12 +26,13 @@ return (length);
  */
 void rev_string(char *s)
 {
+char temp;
 int length = stringLength(s);
 int start = 0;
 int end = length - 1;
 while (start < end)
 {
-	char temp = s[start];
+	temp = s[start];
 	s[start] = s[end];
 	s[end] = temp;
 	start++;
