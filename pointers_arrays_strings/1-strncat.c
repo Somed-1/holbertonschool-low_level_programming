@@ -30,17 +30,12 @@ char *_strncat(char *dest, char *src, int n)
 {
 int dest_len = _strlen(dest);
 int i = 0;
-
-if (src != NULL && dest != NULL)
+while (i < n && src[i] != '\0')
 {
-	while (i < n && src[i] != '\0')
-	{
-		dest[i + dest_len] = src[i];
-		i++;
-	}
+	dest[i + dest_len] = src[i];
+	i++;
 }
 dest[i + dest_len] = '\0';
 
 return (dest);
 }
-
