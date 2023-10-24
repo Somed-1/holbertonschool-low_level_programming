@@ -9,6 +9,10 @@
  */
 int _strlen(char *s)
 {
+if (s[0] == '')
+{
+	return(0);
+}
 int len;
 len = 0;
 while (s[len] != '\0')
@@ -33,8 +37,8 @@ int dest_len = _strlen(dest);
 int i = 0;
 while (i < n)
 {
-	dest[i+dest_len] = src[i];
+	dest[i + dest_len] = src[i];
 	i++;
 }
-return dest;
+return (dest);
 }
