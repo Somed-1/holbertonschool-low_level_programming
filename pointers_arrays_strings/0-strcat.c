@@ -9,13 +9,13 @@
  */
 int _strlen(char *s)
 {
-	int len;
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
+int len;
+len = 0;
+while (s[len] != '\0')
+{
+	len++;
+}
+return (len);
 }
 
 /**
@@ -28,12 +28,12 @@ int _strlen(char *s)
  */
 char *_strcat(char *dest, char *src)
 {
-	int dest_len = _strlen(dest);
-	int i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i + dest_len] = src[i];
-		i++;
-	}
-	return dest;
+int dest_len = _strlen(dest);
+int i = 0;
+while (src[i] != '\0')
+{
+	dest[i + dest_len] = src[i];
+	i++;
+}
+return (dest);
 }
