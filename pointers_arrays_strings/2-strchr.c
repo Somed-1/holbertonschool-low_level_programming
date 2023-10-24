@@ -9,10 +9,6 @@
  */
 char *_strchr(char *s, char c)
 {
-if (c == '\0')
-{
-	return (0);
-}
 while (*s)
 {
 	if (*s == c)
@@ -20,6 +16,10 @@ while (*s)
 		return (s);
 	}
 	s++;
+}
+if (c == '\0')
+{
+	return (s);
 }
 return ('\0');
 }
