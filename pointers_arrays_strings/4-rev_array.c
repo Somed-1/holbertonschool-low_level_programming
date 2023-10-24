@@ -1,21 +1,19 @@
 #include "main.h"
 /**
- * reverse_array - Concatenate two strings, limiting the number of characters copied
+ * reverse_array - print an array of integers
+ * @a: an array of integers
+ * @n: the number of elements to swap
  *
- * @a: Destination string
- * @n: Maximum number of characters to copy from src
- *
- * Return: Pointer to the concatenated string
+ * Return: nothing.
  */
 void reverse_array(int *a, int n)
 {
-int i, temp;
-i = 0;
-while (i < n / 2)
+int i, tmp;
+
+for (i = 0; i < n / 2; i++)
 {
-	temp = a[i];
-	a[i] = a[n - i - 1];
-	a[n] = temp;
-	i++;
+tmp = a[i];
+a[i] = a[n - i - 1];
+a[n - i - 1] = tmp;
 }
 }
