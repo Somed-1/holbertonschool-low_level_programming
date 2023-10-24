@@ -10,6 +10,7 @@
 int _strlen(char *s)
 {
 	int len;
+	len = 0;
 	while (s[len] != '\0')
 	{
 		len++;
@@ -31,7 +32,7 @@ char *_strcat(char *dest, char *src)
 	int i = 0;
 	while (src[i] != '\0')
 	{
-		dest[i+dest_len] = src[i];
+		dest[i + dest_len] = src[i];
 		i++;
 	}
 	return dest;
