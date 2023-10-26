@@ -31,6 +31,7 @@ return (length);
 char *infinite_add(char *a, char *b, char *result, int size_result)
 {
 int i, j, k, carry, sum, len_a, len_b;
+char temp;
 
 len_a = _strlen(a);
 len_b = _strlen(b);
@@ -61,7 +62,7 @@ result[k] = '\0';
 
 for (i = 0, j = k - 1; i < j; i++, j--)
 {
-	char temp = result[i];
+	temp = result[i];
 	result[i] = result[j];
 	result[j] = temp;
 }
