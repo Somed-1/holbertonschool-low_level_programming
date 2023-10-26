@@ -3,7 +3,7 @@
 /**
  * _strlen - Calculate the length of a string.
  *
- * str: A pointer to the string whose length is to be calculated.
+ * @str: A pointer to the string whose length is to be calculated.
  *
  * Return: An integer representing the length of the input string.
  */
