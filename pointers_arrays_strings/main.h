@@ -32,4 +32,5 @@ void print_diagsums(int *a, int size);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 void set_string(char **s, char *to);
 void print_number(int n);
+void print_buffer(char *b, int size);
 #endif /* MAIN_H */
