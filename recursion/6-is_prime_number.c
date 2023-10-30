@@ -18,7 +18,7 @@ if (b % a == 0 || b % (a + 2) == 0)
 if (a * a <= b)
 {
 	a += 6;
-return rec_prime(a, b);
+return (rec_prime(a, b));
 }
 else
 {
