@@ -2,34 +2,7 @@
 
 
 /**
- * _print_rev_recursion - Entry point
- *
- *@s: int
- *
- * Return: Always 0 (Success)
- */
-void print(long n)
-{
-    if (n < 0) {
-        putchar('-');
-        n = -n;
-    }
-
-    if (n/10)
-        print(n/10);
-
-    putchar(n%10 + '0');
-}
-
-int main()
-{
-    long int n = 12045;
-    print(n);
-    return 0;
-}
-
-/**
- * _print_rev_recursion - Entry point
+ * _strlen_recursion - Entry point
  *
  *@s: int
  *
