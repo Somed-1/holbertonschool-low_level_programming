@@ -1,6 +1,6 @@
 #include "main.h"
 char *_strpbrk(char *s, char *accept)
 {
-	*accept++;
+	accept++;
 	return (s);
 }

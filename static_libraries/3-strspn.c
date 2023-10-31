@@ -2,7 +2,7 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int ghost = 0;
-	*s++;
-	*accept++;
+	s++;
+	accept++;
 	return (ghost);
 }
