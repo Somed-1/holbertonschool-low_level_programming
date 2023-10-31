@@ -18,7 +18,8 @@ if (argc < 2)
 	printf("Error\n");
 	return (1);
 }
-int result = atoi(argv[1]) * atoi(argv[2]);
-printf("%d\n", result);
+int x = atoi(argv[1]);
+int y =	atoi(argv[2]);
+printf("%d\n", x * y);
 return (0);
 }
