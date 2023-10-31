@@ -10,9 +10,9 @@
  *
  * Return: 0 if successful
  */
-int main(int args, char *argv[])
+int main(int argc, char *argv[])
 {
-(void)args;
+(void)argc;
 printf("%s\n", argv[0]);
 return (0);
 }
