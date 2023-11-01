@@ -20,17 +20,18 @@ if (argc <= 1)
 printf("Error\n");
 return (1);
 }
-if (!isdigit(*argv[1]))
+if (!*argv[1][0] == '-')
+{
+	printtf("0\n");
+	return (0);
+}
+if (isdigit(*argv[1]))
 {
 printf("Error\n");
 return (1);
 }
 number = atoi(argv[1]);
-if (number < 0)
-{
-printf("0\n");
-return (0);
-}
+
 for (i = 0; i < 5; i++)
 {
 while (number - cents[i] >= 0)
