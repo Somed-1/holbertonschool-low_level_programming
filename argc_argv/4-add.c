@@ -1,29 +1,37 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * main - Entry point of the program
- *
- * This function prints characters from the first command-line argument.
- *
- * @argc: Number of command-line arguments
- * @argv: Array of command-line arguments
- *
- * Return: 0 if successful
- */
-int main(int argc, char *argv[])
+ * main - prints name of file
+ * @argc: number of arguments
+ * @argv: arguments entered
+ * Description: print name of file
+ * Return: zero
+ **/
+int main(int argc, char **argv)
 {
-if (argc == 1)
+int i, n, sum = 0;
+char *flag;
+
+if (argc < 2)
 {
-	printf("0\n");
-	return (1);
+printf("0\n");
+return (0);
 }
-int i;
-int sum;
-sum = 0;
-for (i = 1; i < argc; i++)
+
+for (i = 1; argv[i]; i++)
 {
-	char *endptr;
-	long num = strtol(argv[i],)
+n = strtol(argv[i], &flag, 10);
+if (*flag)
+{
+printf("Error\n");
+return (1);
 }
+else
+{
+sum += n;
+}
+}
+printf("%d\n", sum);
+
 return (0);
 }
