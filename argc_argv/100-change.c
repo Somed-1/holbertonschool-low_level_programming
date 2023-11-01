@@ -20,9 +20,9 @@ if (argc <= 1)
 printf("Error\n");
 return (1);
 }
-if (!*argv[1][0] == '-')
+if (!argv[1][0] == '-')
 {
-	printtf("0\n");
+	printf("0\n");
 	return (0);
 }
 if (isdigit(*argv[1]))
