@@ -2,16 +2,13 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-
-/*
- * main - function
- *
- * @argc: int
- * @argv: hello
- *
- * Retrun: okay
- *
- */
+/**
+ * main - prints name of file
+ * @argc: number of arguments
+ * @argv: arguments entered
+ * Description: print name of file
+ * Return: zero
+ **/
 int main(int argc, char *argv[])
 {
 int i;
