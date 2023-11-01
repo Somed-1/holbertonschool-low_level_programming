@@ -2,6 +2,16 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+
+/*
+ * main - function
+ *
+ * @argc: int
+ * @argv: hello
+ *
+ * Retrun: okay
+ *
+ */
 int main(int argc, char *argv[])
 {
 int i;
