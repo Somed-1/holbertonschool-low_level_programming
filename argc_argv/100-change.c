@@ -47,6 +47,6 @@ break;
 }
 }
 printf("%d\n", count);
-return (count);
+return (0);
 }
 
