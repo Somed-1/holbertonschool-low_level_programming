@@ -29,7 +29,7 @@ if (left >= right)
 }
 if (*(s + left) == *(s + right))
 {
-	return real(s, left + 1, right - 1);
+	return (real(s, left + 1, right - 1));
 }
 else
 {
