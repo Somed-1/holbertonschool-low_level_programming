@@ -13,6 +13,14 @@ if (s[0] != '\0')
 return (0);
 }
 
+/**
+* real - check if s is palindrome
+* @s: base address for string.
+* @left: base
+* @right: base
+*
+* Return: 1 if n is prime, 0 otherwise.
+*/
 int real(char *s, int left, int right)
 {
 if (left >= right)
@@ -29,7 +37,12 @@ else
 }
 }
 
-
+/**
+* is_palindrome - check if s is palindrome
+* @s: base address for string.
+*
+* Return: 1 if n is prime, 0 otherwise.
+*/
 int is_palindrome(char *s)
 {
 if (*s == '\0')
