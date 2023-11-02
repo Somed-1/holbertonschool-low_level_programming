@@ -49,5 +49,5 @@ if (*s == '\0')
 {
 	return (1);
 }
-return real(s, 0, len(s) - 1);
+return (real(s, 0, len(s) - 1));
 }
