@@ -18,7 +18,7 @@ if (str == NULL)
 	return (NULL);
 }
 len = strlen(str);
-result = malloc(sizeof(char) * len);
+result = malloc(sizeof(char) * len + 1);
 strcpy(str, result);
 return (result);
 }
