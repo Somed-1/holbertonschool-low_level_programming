@@ -18,11 +18,11 @@ if (str == NULL)
 	return (NULL);
 }
 len = strlen(str);
-result = (char *)malloc(sizeof(char) * len);
+result = (char *)malloc(sizeof(char) * (len + 1));
 if (result == NULL)
 {
 	return (NULL);
 }
-strcpy(str, result);
+strcpy(result, str);
 return (result);
 }
