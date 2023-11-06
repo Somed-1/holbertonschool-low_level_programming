@@ -28,12 +28,12 @@ result[i] = malloc(sizeof(int) * width);
 if (result[i] == NULL)
 {
 for (j = 0; j < i; j++)
-    free(result[j]);
+	free(result[j]);
 free(result);
 return (NULL);
 }
 for (j = 0; j < width; j++)
-result[i][j] = 0;
+	result[i][j] = 0;
 }
 
 return (result);
