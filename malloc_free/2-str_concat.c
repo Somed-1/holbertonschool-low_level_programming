@@ -3,13 +3,14 @@
 #include <string.h>
 
 /**
- * _strdup - Entry point
+ * str_concat - Entry point
  *
- * @str: char string
+ * @s1: char string
+ * @s2: char strign
  *
  * Return: Always 0 (Success)
  */
-char *_strdup(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 char *result;
 result = (char *)malloc(strlen(s1) + strlen(s2) + 1);
