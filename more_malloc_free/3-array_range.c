@@ -28,7 +28,7 @@ if (result == NULL)
 	return (NULL);
 }
 i = 0;
-while (min != max)
+while (min <= max)
 {
 result[i] = min;
 min++;
