@@ -1,6 +1,8 @@
-#include <stdio.h>
+#include <stdlib.h>
 /**
- * main - Entry point
+ * malloc_checked - Entry point
+ *
+ * @b: int
  *
  * Return: Always 0 (Success)
  */
