@@ -12,7 +12,7 @@
  *
  * Return: If the function fails, it should return NULL
  */
-void *array_range(int min, int max)
+int *array_range(int min, int max)
 {
 int *result;
 int len = max - min;
