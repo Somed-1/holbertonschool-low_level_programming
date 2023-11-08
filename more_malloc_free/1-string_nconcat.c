@@ -19,7 +19,7 @@ unsigned int s2_len = strlen(s2);
 unsigned int i;
 if (s2 == NULL)
 {
-	*s2 = "";
+	*s2 = '';
 }
 if (n >= s2_len)
 {
