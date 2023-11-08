@@ -22,7 +22,7 @@ if (min > max)
 	return (NULL);
 }
 
-result = malloc(max * sizeof(int));
+result = malloc((max - min) * sizeof(int));
 if (result == NULL)
 {
 	return (NULL);
