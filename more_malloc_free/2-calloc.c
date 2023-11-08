@@ -22,7 +22,7 @@ if (result == NULL)
 p = (unsigned char *)result;
 for (i = 0; i < (size * nmemb); i++)
 {
-	p[i] = (int *)0;
+	p[i] = 0;
 }
 return (result);
 }
