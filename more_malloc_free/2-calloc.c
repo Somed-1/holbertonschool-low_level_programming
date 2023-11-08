@@ -4,7 +4,14 @@
 #include <string.h>
 
 
-
+/**
+ * _calloc - a function that concatenates two strings.
+ *
+ * @nmemb: first char
+ * @size: secound char
+ *
+ * Return: If the function fails, it should return NULL
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 void *result;
