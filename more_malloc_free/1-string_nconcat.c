@@ -32,5 +32,6 @@ for (i = 0; i < n; i++)
 	result[s1_len + i] = *s2;
 	s2++;
 }
+result[s1_len + i] = '\0';
 return (result);
 }
