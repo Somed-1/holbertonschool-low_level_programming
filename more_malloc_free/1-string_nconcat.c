@@ -21,7 +21,7 @@ if (n >= s2_len)
 {
 	n = s2_len;
 }
-result = malloc(sizeof(char) * (s1_len + n));
+result = malloc(sizeof(char) * (s1_len + n + 1));
 if (result == NULL)
 {
 	return (NULL);
