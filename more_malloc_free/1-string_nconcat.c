@@ -27,9 +27,9 @@ if (result == NULL)
 	return (NULL);
 }
 strcpy(result, s1);
-for (i = s1_len; i < n; i++)
+for (i = 0; i < n; i++)
 {
-	result[i] = *s2;
+	result[s1_len + i] = *s2;
 	s2++;
 }
 return (result);
