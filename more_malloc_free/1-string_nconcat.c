@@ -17,6 +17,10 @@ char *result;
 unsigned int i;
 unsigned int s1_len;
 unsigned int s2_len;
+if (s1 == NULL)
+{
+	s1 = "";
+}
 if (s2 == NULL)
 {
 	s2 = "";
