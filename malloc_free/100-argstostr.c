@@ -21,7 +21,7 @@ if (ac == 0 || av == NULL)
 {
 	return (NULL);
 }
-total_len += ac;
+total_len = ac;
 for (i = 0; i < ac; i++)
 {
 	total_len += strlen(av[i]);
