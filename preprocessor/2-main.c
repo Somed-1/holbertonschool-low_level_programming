@@ -1,8 +1,12 @@
 #include <stdio.h>
-
-int main(int argc, char **argv)
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-	(void)argc;
-	printf("%s", argv[0]);
-	return (0);
+printf("%s\n", __FILE__);
+
+return (0);
 }
