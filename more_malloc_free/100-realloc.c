@@ -13,7 +13,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
     void *new;
     char *p_ptr, *p_new;
-    int i;
+    unsigned int i;
     if (new_size == old_size)
         return (ptr);
     if (ptr == NULL)
