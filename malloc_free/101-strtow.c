@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * words_count
+ * words_count - counts words using spaces
  * 
  * @str: string
  * 
@@ -35,7 +35,7 @@ int words_count(char *str)
  * copy - copy the string
  * 
  * @str: string
- * @size: len
+ * @len: len
  * 
  * Return: string
  */
@@ -74,6 +74,10 @@ char **strtow(char *str)
 		return (NULL);
 	}
 	count = words_count(str);
+	if (words_count == 0)
+	{
+		return (NULL);
+	}
 	result = malloc(sizeof(char *) * (count + 1));
 	/*Check if malloc worked correct*/
 	if (result == NULL)
