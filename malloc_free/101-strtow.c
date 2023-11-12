@@ -6,7 +6,7 @@
  * words_count - counts words using spaces
  *
  * @str: string
- * 
+ *
  * Return: count of words
  */
 int words_count(char *str)
@@ -33,10 +33,10 @@ return (count);
 
 /**
  * copy - copy the string
- * 
+ *
  * @str: string
  * @len: len
- * 
+ *
  * Return: string
  */
 char *copy(char *str, int len)
@@ -56,9 +56,9 @@ return (new);
 }
 /**
  * strtow - separates words from given string
- * 
+ *
  * @str: string
- * 
+ *
  * Return: new array with separated words
  */
 char **strtow(char *str)
