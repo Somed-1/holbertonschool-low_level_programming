@@ -6,7 +6,7 @@
 void multiplyStrings(char num1[], char num2[], char result[]) {
 	int len1 = strlen(num1);
 	int len2 = strlen(num2);
-	int m[len1 + len2];
+	int m[3000];
 
 	for (int i = 0; i < len1 + len2; i++) {
 		m[i] = 0;
