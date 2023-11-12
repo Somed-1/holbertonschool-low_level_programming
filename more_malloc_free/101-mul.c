@@ -4,7 +4,8 @@
 #include <ctype.h>
 
 void multiply(char *num1, char *num2) {
-	int i, j;
+	int i;
+	int j;
 	int digit1, digit2;
 	int sum;
 	int carry;
@@ -25,7 +26,7 @@ void multiply(char *num1, char *num2) {
 		digit1 = num1[i] - '0';
 		carry = 0;
 
-		for (int j = len2 - 1; j >= 0; j--) {
+		for (j = len2 - 1; j >= 0; j--) {
 			 digit2 = num2[j] - '0';
 			 sum = digit1 * digit2 + result[i + j + 1] + carry;
 			result[i + j + 1] = sum % 10;
