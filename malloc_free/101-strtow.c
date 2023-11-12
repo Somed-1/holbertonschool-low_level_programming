@@ -74,7 +74,7 @@ char **strtow(char *str)
 		return (NULL);
 	}
 	count = words_count(str);
-	if (words_count == 0)
+	if (count == 0)
 	{
 		return (NULL);
 	}
