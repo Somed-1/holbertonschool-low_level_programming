@@ -68,42 +68,31 @@ char *start;
 int count;
 int len, temp_len, i, j;
 len = strlen(str);
-/*Check if string is correct*/
 if (str == NULL || len == 0)
-{
 	return (NULL);
-}
 count = words_count(str);
-if (count == 0)
-{
-	return (NULL);
-}
 result = malloc(sizeof(char *) * (count + 1));
-/*Check if malloc worked correct*/
 if (result == NULL)
-{
 	return (NULL);
-}
-/*Filling result with pointers*/
 i = 0;
 while (*(str + j))
 {
-if (*(str + j) != ' ')
-{
-	temp_len = 0;
-	start = (str + j);
-	while (*(str + j) != ' ' && *(str + j) != '\0')
+	if (*(str + j) != ' ')
+	{
+		temp_len = 0;
+		start = (str + j);
+		while (*(str + j) != ' ' && *(str + j) != '\0')
+		{
+			j++;
+			temp_len += 1;
+		}
+		result[i] = copy(start, temp_len);
+		i++;
+	}
+	else
 	{
 		j++;
-		temp_len += 1;
 	}
-	result[i] = copy(start, temp_len);
-	i++;
-}
-else
-{
-	j++;
-}
 }
 result[i] = NULL;
 return (result);
