@@ -3,8 +3,8 @@
 #include <string.h>
 
 /**
- * words_count
- * 
+ * words_count - counts words using spaces
+ *
  * @str: string
  * 
  * Return: count of words
