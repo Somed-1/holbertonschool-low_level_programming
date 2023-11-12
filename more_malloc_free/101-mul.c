@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 {
 	char *a, *b;
 	int len_a, len_b, max_len;
-	int *result;  // Use an array of integers to store the result
+	int *result;
 	int i, j, carry, product;
 
 	if (argc != 3)
@@ -53,14 +53,12 @@ int main(int argc, char **argv)
 		result[i + j + 1] += carry;
 	}
 
-	// Find the first non-zero digit
 	i = 0;
 	while (i < max_len && result[i] == 0)
 	{
 		i++;
 	}
 
-	// Print the result
 	for (; i < max_len; i++)
 	{
 		printf("%d", result[i]);
