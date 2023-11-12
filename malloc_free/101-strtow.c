@@ -71,6 +71,8 @@ len = strlen(str);
 if (str == NULL || len == 0)
 	return (NULL);
 count = words_count(str);
+if (count == 0)
+	return (NULL);
 result = malloc(sizeof(char *) * (count + 1));
 if (result == NULL)
 	return (NULL);
