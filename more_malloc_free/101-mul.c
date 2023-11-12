@@ -1,78 +1,77 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
-
-void multiplyStrings(char num1[], char num2[], char result[]) {
+void multiply(char *num1, char *num2) {
+	int i, j;
+	int digit1, digit2;
+	int sum;
+	int carry;
 	int len1 = strlen(num1);
 	int len2 = strlen(num2);
-	int m[3000];
-
-	for (int i = 0; i < len1 + len2; i++) {
-		m[i] = 0;
+	int *result = (int *)malloc(sizeof(int) * (len1 + len2));
+	
+	if (result == NULL) {
+		printf("Memory allocation error\n");
+		return;
 	}
 
-	for (int i = 0; i < len1; i++) {
-		for (int j = 0; j < len2; j++) {
-			m[i + j] += (num1[i] - '0') * (num2[j] - '0');
+	for (i = 0; i < len1 + len2; i++) {
+		result[i] = 0;
+	}
+
+	for (i = len1 - 1; i >= 0; i--) {
+		digit1 = num1[i] - '0';
+		carry = 0;
+
+		for (int j = len2 - 1; j >= 0; j--) {
+			 digit2 = num2[j] - '0';
+			 sum = digit1 * digit2 + result[i + j + 1] + carry;
+			result[i + j + 1] = sum % 10;
+			carry = sum / 10;
 		}
+
+		result[i] += carry;
 	}
 
-	int carry = 0;
-	for (int i = 0; i < len1 + len2; i++) {
-		int sum = m[i] + carry;
-		m[i] = sum % 10;
-		carry = sum / 10;
+	i = 0;
+	while (i < len1 + len2 && result[i] == 0) {
+		i++;
 	}
 
-	int index = len1 + len2 - 1;
-	while (index >= 0 && m[index] == 0) {
-		index--;
+	if (i == len1 + len2) {
+		printf("0\n");
+		free(result);
+		return;
 	}
 
-	if (index == -1) {
-		strcpy(result, "0");
-	} else {
-		int resultIndex = 0;
-		while (index >= 0) {
-			result[resultIndex++] = m[index] + '0';
-			index--;
-		}
-		result[resultIndex] = '\0';
+	for (; i < len1 + len2; i++) {
+		printf("%d", result[i]);
 	}
+	printf("\n");
+
+	free(result);
 }
 
-
 int main(int argc, char *argv[]) {
+	int i, j;
 	if (argc != 3) {
 		printf("Error\n");
 		return 98;
 	}
 
-	char *num1 = argv[1];
-	char *num2 = argv[2];
-
-	for (int i = 0; i < strlen(num1); i++) {
-		if (!isdigit(num1[i])) {
-			printf("Error\n");
-			return 98;
+	for (i = 1; i < 3; i++) {
+		for (j = 0; argv[i][j] != '\0'; j++) {
+			if (!isdigit(argv[i][j])) {
+				printf("Error\n");
+				return 98;
+			}
 		}
 	}
 
-	for (int i = 0; i < strlen(num2); i++) {
-		if (!isdigit(num2[i])) {
-			printf("Error\n");
-			return 98;
-		}
-	}
-
-	char result[1000];
-
-	multiplyStrings(num1, num2, result);
-
-	printf("%s\n", result);
+	multiply(argv[1], argv[2]);
 
 	return 0;
 }
-
 
