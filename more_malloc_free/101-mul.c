@@ -55,7 +55,6 @@ int main(int argc, char **argv)
 
 	result[max_len - 1] = '\0';
 
-	// Remove leading zeros
 	i = 0;
 	while (result[i] == '0')
 	{
