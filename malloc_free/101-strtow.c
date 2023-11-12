@@ -88,22 +88,22 @@ if (result == NULL)
 i = 0;
 while (*(str + j))
 {
-	if (*(str + j) != ' ')
-	{
-		temp_len = 0;
-		start = (str + j);
-		while (*(str + j) != ' ' && *(str + j) != '\0')
-		{
-			j++;
-			temp_len += 1;
-		}
-		result[i] = copy(start, temp_len);
-		i++;
-	}
-	else
+if (*(str + j) != ' ')
+{
+	temp_len = 0;
+	start = (str + j);
+	while (*(str + j) != ' ' && *(str + j) != '\0')
 	{
 		j++;
+		temp_len += 1;
 	}
+	result[i] = copy(start, temp_len);
+	i++;
+}
+else
+{
+	j++;
+}
 }
 result[i] = NULL;
 return (result);
