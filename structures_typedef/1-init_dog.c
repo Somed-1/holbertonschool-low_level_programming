@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "dog.h"
 
 /**
  * init_dog - fucntion that initialize a variavle
@@ -7,6 +6,7 @@
  * @name: string
  * @age: float
  * @owner: string
+ * Return: void
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
