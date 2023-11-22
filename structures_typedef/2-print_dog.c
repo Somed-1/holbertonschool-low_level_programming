@@ -8,5 +8,8 @@
  */
 void pritn_dog(struct dog *d)
 {
-	printf("Name: %s\nAge: %f\nOwner: %s", dog->name, dog->age, dog->owner);
+	char *name = dog->name != NULL? dog->name: "nil";
+	double age = dog->age;
+	char *owner = dog->owner != NULL? dog->owner: "nil";
+	printf("Name: %s\nAge: %f\nOwner: %s\n", name, age, owner);
 }
