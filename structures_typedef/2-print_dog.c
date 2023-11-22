@@ -6,7 +6,7 @@
  * @d: struct inself
  * Return: void
  */
-void pritn_dog(struct dog *d)
+void print_dog(struct dog *d)
 {
 	char *name = d->name != NULL? d->name: "nil";
 	double age = d->age;
