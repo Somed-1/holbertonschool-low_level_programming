@@ -11,7 +11,7 @@
  *
  * Return: Nothing.
  */
-void array_iterator(int *array, size_t size, void (*action))
+void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	while (size--)
 	{
