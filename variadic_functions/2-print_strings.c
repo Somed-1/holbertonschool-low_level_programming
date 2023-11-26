@@ -1,5 +1,5 @@
 #include "variadic_functions.h"
-
+#include <stdtio.h>
 /**
  * print_strings - prints strings, followed by a new line
  * @separator: string to be printed between strings
@@ -32,4 +32,4 @@ printf("%s", separator);
 }
 va_end(list);
 printf("\n");
-
+}
