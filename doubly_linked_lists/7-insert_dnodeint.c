@@ -33,7 +33,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 	{
-		return NULL; // Allocation failed
+		return NULL;
 	}
 
 	new->n = n;
@@ -47,7 +47,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	else
 	{
-		// Inserting at the end of the list
 		new->next = NULL;
 		new->prev = current;
 		current->next = new;
