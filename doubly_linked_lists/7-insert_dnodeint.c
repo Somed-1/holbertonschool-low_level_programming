@@ -1,11 +1,11 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - inserts new node to index
- * @h: first node
- * @idx: index
- * @n: integer
- * Return: the address of the new node or NULL
+ * insert_dnodeint_at_index - inserts a new node at a given index
+ * @h: pointer to the first node
+ * @idx: index at which to insert the new node
+ * @n: integer value for the new node
+ * Return: the address of the new node or NULL on failure
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -16,7 +16,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (idx == 0)
 	{
 		new = add_dnodeint(h, n);
-		return (new);
+		return new;
 	}
 
 	while (current && cur_idx != idx - 1)
@@ -27,21 +27,31 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (!current)
 	{
-		return (NULL);
+		return NULL;
 	}
+
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+	{
+		return NULL; // Allocation failed
+	}
+
+	new->n = n;
 
 	if (current->next)
 	{
-		new = malloc(sizeof(dlistint_t));
-		new->n = n;
-		if (new == NULL)
-			return (NULL);
 		new->next = current->next;
 		new->prev = current;
 		current->next->prev = new;
 		current->next = new;
 	}
-	new = add_dnodeint_end(h, n);
+	else
+	{
+		// Inserting at the end of the list
+		new->next = NULL;
+		new->prev = current;
+		current->next = new;
+	}
 
-	return (new);
+	return new;
 }
