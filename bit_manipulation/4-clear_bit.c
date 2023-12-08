@@ -12,7 +12,8 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	unsigned int max = sizeof(unsigned long int) * 8 - 1;
 
 	if (max < index)
-		return (max);
+		return (-1);
+
 	shift <<= index;
 	*n &= (~shift);
 	return (1);
