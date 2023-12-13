@@ -1,6 +1,7 @@
 #include "main.h"
 
 #define BUF_SIZE 1024
+#define PERMISSION  O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH
 
 #define CLOSE_ERR "Error: Can't close fd %d\n"
 #define READ_ERR "Error: Can't read from file %s\n"
@@ -74,7 +75,7 @@ int main(int argc, char **argv)
 
 	fd_from = open(file_from, O_RDONLY);
 	check_from(fd_from, file_from);
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	fd_to = open(file_to, PERMISSION, 0644);
 	check_to(fd_to, file_to);
 
 	while ((r_len = read(fd_from, buf, BUF_SIZE)) > 0)
