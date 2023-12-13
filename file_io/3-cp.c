@@ -2,9 +2,6 @@
 
 #define BUF_SIZE 1024
 
-#define CREATION_FLAG (O_WRONLY | O_CREAT | O_TRUNC)
-#define PERMISSION_FLAG (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
-
 #define CLOSE_ERR "Error: Can't close fd %d\n"
 #define READ_ERR "Error: Can't read from file %s\n"
 #define WRITE_ERR "Error: Can't write to %s\n"
@@ -85,7 +82,7 @@ int main(int argc, char **argv)
 
 	fd_from = open(file_from, O_RDONLY);
 	check_from(-1, file_from, -1, fd_from);
-	fd_to = open(file_to, CREATION_FLAG, PERMISSION_FLAG);
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	check_to(-1, file_to, fd_from, fd_to);
 
 	while ((r_len = read(fd_from, buf, BUF_SIZE)) > 0)
