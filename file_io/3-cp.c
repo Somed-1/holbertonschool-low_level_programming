@@ -37,10 +37,8 @@ void check_to(int fd_to, char *file_to, int fd_from, int check)
 	if (check < 0)
 	{
 		dprintf(STDERR_FILENO, WRITE_ERR, file_to);
-		if (fd_to > 0)
-			close(fd_to);
-		if (fd_from > 0)
-			close(fd_from);
+		close(fd_to);
+		close(fd_from);
 		exit(99);
 	}
 }
@@ -58,10 +56,8 @@ void check_from(int fd_from, char *file_from, int fd_to, int check)
 	if (check < 0)
 	{
 		dprintf(STDERR_FILENO, READ_ERR, file_from);
-		if (fd_to > 0)
-			close(fd_to);
-		if (fd_from > 0)
-			close(fd_from);
+		close(fd_to);
+		close(fd_from);
 		exit(98);
 	}
 }
