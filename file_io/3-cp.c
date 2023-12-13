@@ -1,13 +1,15 @@
 #include "main.h"
 
 #define BUF_SIZE 1024
-#define CREATION_FLAG (O_WRONLY | O_CREAT | O_TRUNC)
-#define PERMISSION_FLAG (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH) 
+
+#define CREATION_FLAG (O_WRONLY | O_CREAT | O_TRUNC
+#define PERMISSION_FLAG (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 
 #define CLOSE_ERR "Error: Can't close fd %d\n"
 #define READ_ERR "Error: Can't read from file %s\n"
 #define WRITE_ERR "Error: Can't write to %s\n"
 #define USAGE_ERR "Usage: cp file_from file_to\n"
+
 /**
  * try_close - treis to close file
  * @fd: fd of file
@@ -21,7 +23,6 @@ void try_close(int fd)
 		exit(100);
 	}
 }
-
 
 /**
  * check_to - checks to
