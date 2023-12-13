@@ -67,7 +67,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, USAGE_ERR);
-		exit(98);
+		exit(97);
 	}
 	file_from = argv[1];
 	file_to = argv[2];
