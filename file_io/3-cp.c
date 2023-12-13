@@ -2,7 +2,7 @@
 
 #define BUF_SIZE 1024
 
-#define CREATION_FLAG (O_WRONLY | O_CREAT | O_TRUNC
+#define CREATION_FLAG (O_WRONLY | O_CREAT | O_TRUNC)
 #define PERMISSION_FLAG (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 
 #define CLOSE_ERR "Error: Can't close fd %d\n"
@@ -95,5 +95,6 @@ int main(int argc, char **argv)
 	}
 	try_close(fd_from);
 	try_close(fd_to);
+
 	return (0);
 }
