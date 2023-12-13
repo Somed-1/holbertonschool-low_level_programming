@@ -87,9 +87,10 @@ int main(int argc, char **argv)
 	check_from(-1, file_from, -1, fd_from);
 	fd_to = open(file_to, CREATION_FLAG, PERMISSION_FLAG);
 	check_to(-1, file_to, fd_from, fd_to);
-
-	while ((r_len = read(fd_from, buf, BUF_SIZE)) >= 0)
+	r_len = BUF_SIZE;
+	while (r_len == BUF_SIZE)
 	{
+		r_len = read(fd_from, buf, BUF_SIZE);
 		check_from(fd_from, file_from, fd_to, r_len);
 		w_len = write(fd_to, buf, r_len);
 		check_to(fd_to, file_to, fd_from, w_len);
