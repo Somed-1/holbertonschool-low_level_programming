@@ -90,6 +90,7 @@ int main(int argc, char **argv)
 
 	while ((r_len = read(fd_from, buf, BUF_SIZE)) > 0)
 	{
+		check_from(fd_from, file_from, fd_to, r_len);
 		w_len = write(fd_to, buf, r_len);
 		check_to(fd_to, file_to, fd_from, w_len);
 	}
