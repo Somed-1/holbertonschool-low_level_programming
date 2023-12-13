@@ -30,11 +30,15 @@ void try_close(int fd)
  * @file_to: file to
  * Return: void
  */
-void check_to(int fd_to, char *file_to)
+void check_to(int fd_to, char *file_to, int fd_from, int close_to)
 {
 	if (fd_to < 0)
 	{
 		dprintf(STDERR_FILENO, WRITE_ERR, file_to);
+		if (close_to > 0)
+			close(fd_to);
+		if (fd_from > 0)
+			close(fd_from);
 		exit(99);
 	}
 }
@@ -45,11 +49,15 @@ void check_to(int fd_to, char *file_to)
  * @file_from: file from
  * Return: void
  */
-void check_from(int fd_from, char *file_from)
+void check_from(int fd_from, char *file_from, int fd_to, int check)
 {
-	if (fd_from < 0)
+	if (check < 0)
 	{
 		dprintf(STDERR_FILENO, READ_ERR, file_from);
+		if (fd_to > 0)
+			close(fd_to);
+		if (fd_from > 0)
+			close(fd_from);
 		exit(98);
 	}
 }
@@ -76,18 +84,14 @@ int main(int argc, char **argv)
 	file_to = argv[2];
 
 	fd_from = open(file_from, O_RDONLY);
-	check_from(fd_from, file_from);
+	check_from(-1, file_from, -1, fd_from);
 	fd_to = open(file_to, CREATION_FLAG, PERMISSION_FLAG);
-	check_to(fd_to, file_to);
+	check_to(-1, file_to, fd_from, fd_to);
 
 	while ((r_len = read(fd_from, buf, BUF_SIZE)) > 0)
 	{
 		w_len = write(fd_to, buf, r_len);
-		if (w_len < 0)
-		{
-			dprintf(STDERR_FILENO, WRITE_ERR, file_to);
-			exit(99);
-		}
+		check_to(fd_to, file_to, fd_from, l_w);
 	}
 	try_close(fd_from);
 	try_close(fd_to);
