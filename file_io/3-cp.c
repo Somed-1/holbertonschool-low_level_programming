@@ -1,8 +1,8 @@
 #include "main.h"
 
 #define BUF_SIZE 1024
-#define CREATION_FLAG O_WRONLY | O_CREAT | O_TRUNC
-#define PERMISSION_FLAG S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH 
+#define CREATION_FLAG (O_WRONLY | O_CREAT | O_TRUNC)
+#define PERMISSION_FLAG (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH) 
 
 #define CLOSE_ERR "Error: Can't close fd %d\n"
 #define READ_ERR "Error: Can't read from file %s\n"
