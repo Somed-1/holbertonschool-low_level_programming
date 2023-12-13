@@ -3,7 +3,7 @@
 #define BUF_SIZE 1024
 
 #define CLOSE_ERR "Error: Can't close fd %d\n"
-#define OPEN_ERR "Error: Can't read from file %s\n"
+#define READ_ERR "Error: Can't read from file %s\n"
 #define WRITE_ERR "Error: Can't write to %s\n"
 #define USAGE_ERR "Usage: cp file_from file_to\n"
 /**
