@@ -2,6 +2,9 @@
 
 #define BUF_SIZE 1024
 
+#define CREATION_FLAG (O_WRONLY | O_CREAT | O_TRUNC)
+#define PERMISSION_FLAG (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
+
 #define CLOSE_ERR "Error: Can't close fd %d\n"
 #define READ_ERR "Error: Can't read from file %s\n"
 #define WRITE_ERR "Error: Can't write to %s\n"
@@ -25,6 +28,8 @@ void try_close(int fd)
  * check_to - checks to
  * @fd_to: fd to
  * @file_to: file to
+ * @fd_from: fd from
+ * @check: checks
  * Return: void
  */
 void check_to(int fd_to, char *file_to, int fd_from, int check)
@@ -44,6 +49,8 @@ void check_to(int fd_to, char *file_to, int fd_from, int check)
  * check_from - checks from
  * @fd_from: fd from
  * @file_from: file from
+ * @fd_to: fd to
+ * @check: checks
  * Return: void
  */
 void check_from(int fd_from, char *file_from, int fd_to, int check)
@@ -82,7 +89,7 @@ int main(int argc, char **argv)
 
 	fd_from = open(file_from, O_RDONLY);
 	check_from(-1, file_from, -1, fd_from);
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	fd_to = open(file_to, CREATION_FLAG, PERMISSION_FLAG);
 	check_to(-1, file_to, fd_from, fd_to);
 
 	while ((r_len = read(fd_from, buf, BUF_SIZE)) > 0)
