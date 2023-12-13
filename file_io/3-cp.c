@@ -30,12 +30,12 @@ void try_close(int fd)
  * @file_to: file to
  * Return: void
  */
-void check_to(int fd_to, char *file_to, int fd_from, int close_to)
+void check_to(int fd_to, char *file_to, int fd_from, int check)
 {
-	if (fd_to < 0)
+	if (check < 0)
 	{
 		dprintf(STDERR_FILENO, WRITE_ERR, file_to);
-		if (close_to > 0)
+		if (fd_to > 0)
 			close(fd_to);
 		if (fd_from > 0)
 			close(fd_from);
@@ -91,7 +91,7 @@ int main(int argc, char **argv)
 	while ((r_len = read(fd_from, buf, BUF_SIZE)) > 0)
 	{
 		w_len = write(fd_to, buf, r_len);
-		check_to(fd_to, file_to, fd_from, l_w);
+		check_to(fd_to, file_to, fd_from, w_len);
 	}
 	try_close(fd_from);
 	try_close(fd_to);
