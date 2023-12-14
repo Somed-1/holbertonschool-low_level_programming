@@ -7,7 +7,7 @@
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	hash = 5381;
+	unsigned long int hash = 5381;
 
 	while (*str++)
 	{
