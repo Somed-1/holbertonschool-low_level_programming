@@ -48,22 +48,21 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	idx = key_index((const unsigned char *)key, ht->size);
 	cur = ht->array[idx];
-	while (!cur->next)
+	while (!cur)
 	{
-		if (strcmp(temp->key, key) == 0)
+		if (strcmp(cur->key, key) == 0)
 		{
 			new = strdup(value);
 			if (new == NULL)
 				return (0);
 			free(temp->value);
-			temp->value = new;
+			cur->value = new;
 			return (1);
 		}
 		cur = cur->next;
 	}
-	cur->next = new_hash_node(key, value);
+	cur = new_hash_node(key, value);
 	if (!(cur->new))
 		return (0);
-
 	return (1);
 }
