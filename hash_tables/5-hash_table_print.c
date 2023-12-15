@@ -15,6 +15,7 @@ void linked_list_print(hash_node_t *head, int comma)
 		{
 			printf(", ");
 		}
+		head = head->next;
 	}
 }
 
