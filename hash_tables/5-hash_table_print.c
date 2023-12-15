@@ -34,7 +34,7 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	while (i < (ht->size))
 	{
-		comma = ((i == (ht->size - 1)) != NULL) ? 1 : 0;
+		comma = (i == (ht->size - 1)) ? 1 : 0;
 		linked_list_print(cur, comma);
 		cur = ht->array[++i];
 	}
