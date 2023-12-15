@@ -29,16 +29,14 @@ void hash_table_print(const hash_table_t *ht)
 	int comma = 1;
 
 	i = 0;
-	cur = ht->array[i];
-	printf("%ld", ht->size);
 	printf("{");
-	while (cur)
+	while (i < ht->size)
 	{
-		if (i == (ht->size) - 2)
+		cur = ht->array[i];
+		if (cur->next == NULL)
 			comma = 0;
 		linked_list_print(cur, comma);
 		i++;
-		cur = ht->array[i];
 	}
-	printf("}");
+	printf("}\n");
 }
