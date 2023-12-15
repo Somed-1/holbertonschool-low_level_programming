@@ -55,14 +55,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			new = strdup(value);
 			if (new == NULL)
 				return (0);
-			free(temp->value);
+			free(cur->value);
 			cur->value = new;
 			return (1);
 		}
 		cur = cur->next;
 	}
 	cur = new_hash_node(key, value);
-	if (!(cur->new))
+	if (!(cur))
 		return (0);
 	return (1);
 }
