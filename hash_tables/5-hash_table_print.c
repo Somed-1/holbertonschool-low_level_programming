@@ -32,7 +32,7 @@ void hash_table_print(const hash_table_t *ht)
 	cur = ht->array[i];
 	printf("%ld", ht->size);
 	printf("{");
-	while (i < (ht->size))
+	while (cur)
 	{
 		if (i == (ht->size) - 2)
 			comma = 0;
