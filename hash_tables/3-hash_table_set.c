@@ -42,6 +42,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx;
 	hash_node_t *cur;
+	char *new;
 
 	if (!ht || !key || !value)
 		return (0);
