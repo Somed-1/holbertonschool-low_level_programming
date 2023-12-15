@@ -33,7 +33,7 @@ void hash_table_print(const hash_table_t *ht)
 	while (i < ht->size)
 	{
 		cur = ht->array[i];
-		if (cur->next == NULL)
+		if ((i + 1) == ht->size)
 			comma = 0;
 		linked_list_print(cur, comma);
 		i++;
