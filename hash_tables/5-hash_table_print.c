@@ -8,14 +8,18 @@
  */
 void linked_list_print(hash_node_t *head, int comma)
 {
-	while (head)
+	while (head->next)
+	{
+		printf("\'%s\':%d \'%s\', ", head->key, comma,  head->value);
+		head = head->next;
+	}
+	if (comma == 1)
+	{
+		printf("\'%s\':%d \'%s\', ", head->key, comma,  head->value);
+	}
+	else
 	{
 		printf("\'%s\':%d \'%s\'", head->key, comma,  head->value);
-		if (comma != 0 && head->next != NULL)
-		{
-			printf(", ");
-		}
-		head = head->next;
 	}
 }
 
