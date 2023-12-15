@@ -4,7 +4,7 @@ void linked_list_print(hash_node_t *head, int comma)
 {
 	while (head)
 	{
-		printf("\'%s\' : \'%s\'");
+		printf("\'%s\' : \'%s\'", head->key, head->value);
 		if (comma && !(head->next))
 		{
 			printf(", ");
@@ -25,7 +25,7 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	while (cur)
 	{
-		comma = (cur->next) ? 1 : 0;
+		comma = ((cur->next) != NULL) ? 1 : 0;
 		linked_list_print(cur, comma);
 	}
 	printf("}");
