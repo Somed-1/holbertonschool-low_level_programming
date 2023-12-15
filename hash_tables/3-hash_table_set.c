@@ -6,15 +6,26 @@
  * @value: value
  * Return: pointer to new hash node
  */
-hash_node_t *new_hash_node(char *key, char *value)
+hash_node_t *new_hash_node(const har *key, const char *value)
 {
 	hash_node_t *new;
 
 	new = malloc(sizeof(hash_node_t));
 	if (!new)
 		return (NULL);
-	new->key = key;
-	new->value = value;
+	new->key = strdup(key);
+	if (!(new->key))
+	{
+		free(new);
+		return (NULL);
+	}
+	new->value = strdup(value);
+	if (!(new->value))
+	{
+		free(new->key);
+		free(new);
+		return (NULL);
+	}
 	new->next = NULL;
 	return (new);
 }
@@ -38,10 +49,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	cur = ht->array[idx];
 	while (!cur->next)
 	{
+		if (strcmp(temp->key, key) == 0)
+		{
+			new = strdup(value);
+			if (new == NULL)
+				return (0);
+			free(temp->value);
+			temp->value = new;
+			return (1);
+		}
 		cur = cur->next;
 	}
 	cur->next = new_hash_node(key, value);
 	if (!(cur->new))
 		return (0);
+
 	return (1);
 }
