@@ -12,7 +12,7 @@ void hash_table_delete(hash_table_t *ht)
 
 	while (i++ < ht->size)
 	{
-		cur = ht->array
+		cur = ht->array[i];
 		while(cur)
 		{
 			temp = cur->next;
