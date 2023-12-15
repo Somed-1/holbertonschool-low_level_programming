@@ -7,11 +7,12 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	long unsigned int i = 0;
+	long unsigned int i;
 	hash_node_t *cur;
 	char *comma = "";
 
 	printf("{");
+	i = 0;
 	while (i++ < ht->size)
 	{
 		cur = ht->array[i];
