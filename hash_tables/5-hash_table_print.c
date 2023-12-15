@@ -13,7 +13,7 @@ void linked_list_print(hash_node_t *head, int comma)
 		printf("\'%s\':%d \'%s\'", head->key, comma,  head->value);
 		if (comma != 0)
 			printf(", ");
-		else if (head->next != NUll)
+		else if (head->next != NULL)
 			printf(", ");
 		head = head->next;
 	}	
