@@ -26,15 +26,17 @@ void linked_list_print(hash_node_t *head, int comma)
 void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *cur;
+	int i;
 	int comma;
 
-	cur = ht->array[0];
+	i = 0;
+	cur = ht->array[i];
 	printf("{");
-	while (cur)
+	while (i < ht->size)
 	{
 		comma = ((cur->next) != NULL) ? 1 : 0;
 		linked_list_print(cur, comma);
-		cur = cur->next;
+		cur = cur[++i];
 	}
 	printf("}");
 }
