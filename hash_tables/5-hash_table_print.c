@@ -32,11 +32,11 @@ void hash_table_print(const hash_table_t *ht)
 	i = 0;
 	cur = ht->array[i];
 	printf("{");
-	while (i < ht->size)
+	while (i < (ht->size))
 	{
-		comma = ((cur->next) != NULL) ? 1 : 0;
+		comma = ((i == (ht->size - 1)) != NULL) ? 1 : 0;
 		linked_list_print(cur, comma);
-		cur = cur[++i];
+		cur = ht->array[++i];
 	}
 	printf("}");
 }
