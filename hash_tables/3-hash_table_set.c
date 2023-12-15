@@ -6,7 +6,7 @@
  * @value: value
  * Return: pointer to new hash node
  */
-hash_node_t *new_hash_node(const har *key, const char *value)
+hash_node_t *new_hash_node(const unsigned char *key, const char *value)
 {
 	hash_node_t *new;
 
@@ -45,7 +45,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht || !key || !value)
 		return (0);
-	idx = key_index(key, value);
+	idx = key_index((const unsigned char *)key, value);
 	cur = ht->array[idx];
 	while (!cur->next)
 	{
