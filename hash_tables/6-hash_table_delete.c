@@ -22,4 +22,6 @@ void hash_table_delete(hash_table_t *ht)
 			cur = temp;
 		}
 	}
+	free(ht->array);
+	free(ht);
 }
