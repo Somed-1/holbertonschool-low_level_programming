@@ -15,7 +15,6 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	cur = ht->array[idx];
 	while (cur)
 	{
-		printf("%s : %s\n", cur->key, key);
 		if (strcmp(cur->key, key) == 0)
 		{
 			return (cur->value);
