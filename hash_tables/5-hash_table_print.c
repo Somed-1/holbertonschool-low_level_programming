@@ -11,7 +11,7 @@ void linked_list_print(hash_node_t *head, int comma)
 	while (head)
 	{
 		printf("\'%s\': \'%s\'", head->key, head->value);
-		if (comma && !(head->next))
+		if (comma && (head->next) == NULL)
 		{
 			printf(", ");
 		}
