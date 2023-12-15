@@ -26,7 +26,7 @@ void linked_list_print(hash_node_t *head, int comma)
 void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *cur;
-	int i;
+	long unsigned int i;
 	int comma;
 
 	i = 0;
