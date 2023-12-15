@@ -34,6 +34,7 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		comma = ((cur->next) != NULL) ? 1 : 0;
 		linked_list_print(cur, comma);
+		cur = cur->next;
 	}
 	printf("}");
 }
