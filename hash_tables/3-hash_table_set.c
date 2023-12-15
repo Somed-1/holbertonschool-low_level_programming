@@ -6,7 +6,7 @@
  * @value: value
  * Return: pointer to new hash node
  */
-hash_node_t *new_hash_node(const unsigned char *key, const char *value)
+hash_node_t *new_hash_node(const char *key, const char *value)
 {
 	hash_node_t *new;
 
