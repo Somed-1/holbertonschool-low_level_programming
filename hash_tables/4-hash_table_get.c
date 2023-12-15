@@ -13,8 +13,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	idx = key_index((const unsigned char *)key, ht->size);
 	cur = ht->array[idx];
-	while (!cur)
+	while (cur)
 	{
+		printf("%s : %s\n", cur->key, key);
 		if (strcmp(cur->key, key) == 0)
 		{
 			return (cur->value);
