@@ -10,10 +10,13 @@ void hash_table_delete(hash_table_t *ht)
 	hash_node_t *cur, *temp;
 	unsigned long int i = 0;
 
+	if (!(ht) || !(ht->array))
+		return;
+
 	while (i++ < ht->size)
 	{
 		cur = ht->array[i];
-		while(cur)
+		while (cur)
 		{
 			temp = cur->next;
 			free(cur->key);
@@ -22,6 +25,9 @@ void hash_table_delete(hash_table_t *ht)
 			cur = temp;
 		}
 	}
+	
 	free(ht->array);
+	ht->array = NULL;
+	ht->size = 0;
 	free(ht);
 }
